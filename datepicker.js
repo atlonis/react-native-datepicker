@@ -90,11 +90,12 @@ class DatePicker extends Component {
     return true;
   }
 
-  onPressMask() {
+ onPressMask () {
     if (typeof this.props.onPressMask === 'function') {
-      this.props.onPressMask();
+      this.props.onPressMask(this.state.date)
+      this.onPressCancel()
     } else {
-      this.onPressCancel();
+      this.onPressCancel()
     }
   }
 
